@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using YatchMasterWS.Models.Response;
 
-namespace YatchMasterWS.Utils
+namespace YatchMasterWS.Utils.Helper
 {
     public class ResponseHelper
     {

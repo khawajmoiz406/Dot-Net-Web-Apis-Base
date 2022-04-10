@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using YatchMasterWS.BLL;
-using YatchMasterWS.Utils;
+using YatchMasterWS.Models.Request;
+using YatchMasterWS.Utils.Helper;
 
 namespace YatchMasterWS.Controllers
 {
@@ -14,6 +15,13 @@ namespace YatchMasterWS.Controllers
         public IActionResult UploadImage(IFormFile file)
         {
             var data = bLL.UploadImage(file);
+            return ResponseHelper.GetAsyncResult(this, data);
+        }
+
+        [HttpPost("SendEmail")]
+        public IActionResult SendEmail(MailRequest request)
+        {
+            var data = bLL.SendEmail(request);
             return ResponseHelper.GetAsyncResult(this, data);
         }
     }

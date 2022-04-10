@@ -24,7 +24,7 @@ using System.Xml;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace YatchMasterWS.Utils
+namespace YatchMasterWS.Utils.Helper
 {
     /// <summary>
     /// The SqlHelper class is intended to encapsulate high performance, scalable best practices for 

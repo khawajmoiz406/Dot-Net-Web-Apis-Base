@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using YatchMasterWS.Services;
 using YatchMasterWS.Utils;
+using YatchMasterWS.Utils.Helper;
 
 namespace webapplication
 {
@@ -26,7 +27,6 @@ namespace webapplication
             var key = Encoding.UTF8.GetBytes(ConfigHelper.GetAppSettings("SecretKey"));
 
             services.AddOptions();
-            services.AddTransient<ITokenService, TokenService>();
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();

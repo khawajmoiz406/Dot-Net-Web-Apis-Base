@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace YatchMasterWS.Utils
+namespace YatchMasterWS.Utils.Helper
 {
     public class ConfigHelper
     {
@@ -18,6 +18,11 @@ namespace YatchMasterWS.Utils
         public static string GetAppSettings (string value)
         {
             return configuration?.GetSection("AppSettings")[value] ?? "";
+        }
+
+        public static IConfiguration? GetSection(string name)
+        {
+            return configuration?.GetSection(name) ?? null;
         }
     }
 }

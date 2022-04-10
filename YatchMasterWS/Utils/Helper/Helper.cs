@@ -2,7 +2,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace YatchMasterWS.Utils
+namespace YatchMasterWS.Utils.Helper
 {
     public class Helper
     {
